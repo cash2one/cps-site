@@ -5,6 +5,8 @@ $(window).on('hashchange', function(e){
 	var hash = location.hash;
 	var lang = hash.replace( /^#/, '' );
 
+	console.log('found'+lang)
+
 	if(lang)
 	{
 		changeLanguage(lang);

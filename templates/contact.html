@@ -6,23 +6,39 @@
 
 <!-- extrac css -->
 {% block extra_css %}
-<link rel="stylesheet" href="/static/css/index.css">
+<link rel="stylesheet" href="/static/css/contact.css">
 {% endblock %}
 
 <!-- extrac js -->
 {% block extra_js %}
-<script src="/static/js/index.js"></script>
 {% endblock %}
 
 {% block main %}
 
 <div class="row">
 	<div class="col-md-1 left"></div>
-	<div class="col-md-10 middle large-banner-wrap">
-		<div class="large-banner">
-			<img src="/static/img/advertise_here.jpg" />
+	<div class="col-md-10 middle">
+		<div class="row contact-wrap">
+			<div class="col-md-7">
+				<div class="img-wrap">
+					<img src="/static/img/contact-us.jpg" width="100%" />
+				</div>
+				
+			</div>
+			<div class="col-md-5">
+				<div class="contact-info-wrap">
+					<i class="fa fa-envelope text" lang="en"> Email</i>
+					<i class="fa fa-envelope text hide" lang="zh-tw"> 電子郵件</i>
+					<div class="email"><a href="mailto:cpsquaretw@gmail.com">cpsquaretw@gmail.com</a></div>
+					
+					<i class="fa fa-mobile text hide" lang="en"> Cellphone</i>
+					<i class="fa fa-mobile text" lang="zh-tw"> 手機</i>
+					<div class="phone"><a href="skype:+886982621414?call">+886 982 621 414</a></div>
+					
+				</div>				
+			</div>
 		</div>
-		<div class="nav-control-wrap"></div>
+
 	</div>
 	<div class="col-md-1 right"></div>
 </div>
