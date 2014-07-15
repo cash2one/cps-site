@@ -7,6 +7,11 @@ a
   text-decoration: none!important;
 }
 
+a.navbar-brand
+{
+  color: white;
+}
+
 a:hover
 {
   color: #cb3b28;
