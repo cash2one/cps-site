@@ -1,5 +1,5 @@
 
-DEBUG = True
+DEBUG = False
 
 # Make these unique, and don't share it with anybody.
 SECRET_KEY = "ca1d32a3-74ff-42ff-a9bc-dd72e0c76fa09e61ec60-5a6f-4809-91dd-c7e6055b0b51503e0b6b-446b-41be-9b0f-b7e94db1390a"
