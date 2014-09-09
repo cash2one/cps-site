@@ -39,6 +39,7 @@ urlpatterns += patterns('',
     url("^about/$", direct_to_template, {"template": "about.html"}, name="about"),
     url("^download/$", direct_to_template, {"template": "download.html"}, name="download"),
     url("^contact/$", direct_to_template, {"template": "contact.html"}, name="contact"),
+    url("^products/$", direct_to_template, {"template": "products.html"}, name="products"),
 
     # HOMEPAGE AS AN EDITABLE PAGE IN THE PAGE TREE
     # ---------------------------------------------
