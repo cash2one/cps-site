@@ -1,5 +1,5 @@
 
-var support = ["zh-tw", "en"];
+// var support = ["zh-tw", "en"];
 
 $(window).on('hashchange', function(e){
 
@@ -29,13 +29,23 @@ function changeLanguage(lang)
 		}
 
 		// get the lang of this obj
-		var this_lang = $(this_obj).attr("lang");
+		var this_lang = $(this_obj).attr("lang").toLowerCase();
 
+		// amend link if the attr href has been found
+		var attr = $(this_obj).attr('href');
+		if (typeof attr !== typeof undefined && attr !== false) {
+			var current_href = $(this_obj).attr("href");
+			if ( current_href.indexOf("#"+this_lang) < 0 ) {
+				$(this_obj).attr("href", current_href+"#"+this_lang);	
+			}			
+		}
+
+		// toggle language
 		if ( this_lang != lang )
 		{
 			if ( !$(this_obj).hasClass("hide") )
 			{
-				$(this_obj).addClass("hide");	
+				$(this_obj).addClass("hide");
 			}			
 		}
 		else
@@ -46,6 +56,8 @@ function changeLanguage(lang)
 }
 
 
+
 $(document).ready(function(){
 	$(window).trigger('hashchange');
+
 })
