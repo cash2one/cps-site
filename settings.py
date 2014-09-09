@@ -132,7 +132,7 @@ LANGUAGES = (
 # A boolean that turns on/off debug mode. When set to ``True``, stack traces
 # are displayed for error pages. Should always be set to ``False`` in
 # production. Best set to ``True`` in local_settings.py
-DEBUG = False
+DEBUG = True
 
 # Whether a user's session cookie expires when the Web browser is closed.
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
@@ -209,7 +209,7 @@ CACHE_MIDDLEWARE_KEY_PREFIX = PROJECT_DIRNAME
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
-STATIC_URL = "static/"
+STATIC_URL = "/static/"
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
