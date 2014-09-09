@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block meta_title %}{% trans "首頁" %}{% endblock %}
+{% block title %}{% trans "首頁" %}{% endblock %}
+
+<!-- extrac css -->
+{% block extra_css %}
+<link rel="stylesheet" href="/static/css/index.css">
+{% endblock %}
+
+<!-- extrac js -->
+{% block extra_js %}
+<script src="/static/js/index.js"></script>
+{% endblock %}
+
+{% block main %}
+<div class="gallery row">
+    {% with page.gallery.images.all as images %}
+    {% for image in images %}
+    <div class="col-xs-4 col-sm-3">
+        <a class="thumbnail" rel="#image-{{ image.id }}" title="{{ image.description }}" href="{{ image.file.url }}">
+            <img class="img-responsive" src="{{ MEDIA_URL }}">
+        </a>
+    </div>
+    {% endfor %}
+    {% endwith %}
+</div>
+
+{% endblock %}
