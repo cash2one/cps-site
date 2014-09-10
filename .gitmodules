@@ -1,0 +1,3 @@
+[submodule "sqliteboy"]
+	path = sqliteboy
+	url = git@github.com:maxis1718/sqliteboy.git
